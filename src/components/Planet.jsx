@@ -11,6 +11,7 @@ const Planet = (props) => {
     useEffect( ()  => {
         axios.get("https://swapi.dev/api/planets/" + id)
             .then( (response) => {
+                console.log(response.data)
                 setPlanetObj(response.data)
             })
             .catch( (errObj) => {
